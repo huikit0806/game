@@ -1,0 +1,1 @@
+DroidSansFallbackFull.ttf — Apache License 2.0 (Android Open Source Project). Bundled so Phaser canvas can render Traditional Chinese on machines without CJK system fonts.
