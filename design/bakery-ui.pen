@@ -3,24 +3,25 @@
   "children": [
     {
       "type": "frame",
-      "id": "SSvzs",
-      "x": 0,
-      "y": 0,
-      "name": "Component Sheet",
-      "fill": "$paper",
-      "cornerRadius": 24,
-      "gap": 24,
-      "padding": 24,
-      "alignItems": "center",
+      "id": "FdIBX",
+      "x": 1506,
+      "y": 765,
+      "name": "入貨",
+      "clip": true,
+      "width": 390,
+      "fill": "$plaster",
+      "cornerRadius": 32,
+      "layout": "vertical",
       "children": [
         {
           "type": "frame",
-          "id": "C27Mqw",
-          "name": "Status Bar",
-          "reusable": true,
-          "width": 390,
-          "height": 62,
+          "id": "K59SoL",
+          "name": "HUD",
+          "width": "fill_container",
+          "height": 72,
           "padding": [
+            18,
+            20,
             0,
             20
           ],
@@ -28,324 +29,29 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "utIn1",
-              "name": "Time",
-              "fill": "$cocoa",
-              "content": "9:41",
-              "fontFamily": "Inter",
-              "fontSize": 15,
-              "fontWeight": "600"
-            },
-            {
               "type": "frame",
-              "id": "rHn4l",
-              "name": "Status Meta",
-              "gap": 8,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "H0SHAs",
-                  "name": "Day Chip",
-                  "fill": "$caramel-soft",
-                  "cornerRadius": 12,
-                  "padding": [
-                    6,
-                    10
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "oS0OQ",
-                      "name": "Day Label",
-                      "fill": "$cocoa",
-                      "content": "第 3 日",
-                      "fontFamily": "$font-body",
-                      "fontSize": 12,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "id": "w3KvFl",
-                  "name": "Cash",
-                  "fill": "$caramel",
-                  "content": "$128",
-                  "fontFamily": "$font-display",
-                  "fontSize": 18,
-                  "fontWeight": "700"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "tLAYT",
-          "name": "Tab Bar",
-          "reusable": true,
-          "width": 390,
-          "layout": "vertical",
-          "padding": [
-            0,
-            16,
-            14,
-            16
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "ElzQZ",
-              "name": "Tab Capsule",
-              "width": "fill_container",
-              "height": 64,
-              "fill": "$paper",
-              "cornerRadius": 32,
-              "stroke": "$line",
-              "strokeWidth": 1,
-              "effect": {
-                "type": "shadow",
-                "shadowType": "outer",
-                "color": "#3C261C14",
-                "offset": {
-                  "x": 0,
-                  "y": 8
-                },
-                "blur": 20
-              },
-              "gap": 4,
-              "padding": 6,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "D71sQ1",
-                  "name": "tab-buy",
-                  "width": "fill_container",
-                  "height": "fill_container",
-                  "cornerRadius": 22,
-                  "layout": "vertical",
-                  "gap": 2,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon",
-                      "id": "NOlTI",
-                      "name": "icon-buy",
-                      "width": 20,
-                      "height": 20,
-                      "icon": "shopping-basket",
-                      "library": "lucide",
-                      "fill": "$muted"
-                    },
-                    {
-                      "type": "text",
-                      "id": "ea1vQ",
-                      "name": "label-buy",
-                      "fill": "$muted",
-                      "content": "入貨",
-                      "fontFamily": "$font-body",
-                      "fontSize": 10,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "f62tl",
-                  "name": "tab-bake",
-                  "width": "fill_container",
-                  "height": "fill_container",
-                  "cornerRadius": 22,
-                  "layout": "vertical",
-                  "gap": 2,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon",
-                      "id": "hYY7p",
-                      "name": "icon-bake",
-                      "width": 20,
-                      "height": 20,
-                      "icon": "wheat",
-                      "library": "lucide",
-                      "fill": "$muted"
-                    },
-                    {
-                      "type": "text",
-                      "id": "crox0",
-                      "name": "label-bake",
-                      "fill": "$muted",
-                      "content": "做包",
-                      "fontFamily": "$font-body",
-                      "fontSize": 10,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "ODMc5",
-                  "name": "tab-shop",
-                  "width": "fill_container",
-                  "height": "fill_container",
-                  "cornerRadius": 22,
-                  "layout": "vertical",
-                  "gap": 2,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon",
-                      "id": "AiCli",
-                      "name": "icon-shop",
-                      "width": 20,
-                      "height": 20,
-                      "icon": "store",
-                      "library": "lucide",
-                      "fill": "$muted"
-                    },
-                    {
-                      "type": "text",
-                      "id": "m0hEgZ",
-                      "name": "label-shop",
-                      "fill": "$muted",
-                      "content": "店面",
-                      "fontFamily": "$font-body",
-                      "fontSize": 10,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "RXs6g",
-                  "name": "tab-settle",
-                  "width": "fill_container",
-                  "height": "fill_container",
-                  "cornerRadius": 22,
-                  "layout": "vertical",
-                  "gap": 2,
-                  "justifyContent": "center",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon",
-                      "id": "z7DggE",
-                      "name": "icon-settle",
-                      "width": 20,
-                      "height": 20,
-                      "icon": "receipt",
-                      "library": "lucide",
-                      "fill": "$muted"
-                    },
-                    {
-                      "type": "text",
-                      "id": "dDy74",
-                      "name": "label-settle",
-                      "fill": "$muted",
-                      "content": "結算",
-                      "fontFamily": "$font-body",
-                      "fontSize": 10,
-                      "fontWeight": "600"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "sLXju",
-          "name": "Primary Button",
-          "reusable": true,
-          "width": 220,
-          "height": 52,
-          "fill": "$caramel",
-          "cornerRadius": 16,
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "iEmjy",
-              "name": "Button Label",
-              "fill": "$white",
-              "content": "確認入貨",
-              "fontFamily": "$font-body",
-              "fontSize": 16,
-              "fontWeight": "700"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "j7EvUk",
-          "name": "Ingredient Card",
-          "reusable": true,
-          "width": 350,
-          "fill": "$paper",
-          "cornerRadius": 18,
-          "stroke": "$line",
-          "strokeWidth": 1,
-          "gap": 12,
-          "padding": 12,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "JHp01",
-              "name": "Thumb",
-              "width": 56,
-              "height": 56,
-              "fill": "$flour",
-              "cornerRadius": 14,
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "j44NWV",
-                  "name": "Thumb Icon",
-                  "width": 26,
-                  "height": 26,
-                  "icon": "wheat",
-                  "library": "lucide",
-                  "fill": "$caramel"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "A53O3",
-              "name": "Card Info",
-              "width": "fill_container",
+              "id": "nVlUj",
+              "name": "Brand",
               "layout": "vertical",
-              "gap": 2,
+              "gap": 1,
               "children": [
                 {
                   "type": "text",
-                  "id": "O35GZ2",
-                  "name": "Card Title",
-                  "fill": "$cocoa",
-                  "content": "高筋麵粉",
-                  "fontFamily": "$font-body",
+                  "id": "Ykezb",
+                  "name": "Bakery",
+                  "fill": "$ink",
+                  "content": "麥香",
+                  "fontFamily": "Noto Sans TC",
                   "fontSize": 16,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
-                  "id": "NqUIx",
-                  "name": "Card Meta",
-                  "fill": "$muted",
-                  "content": "庫存 4",
-                  "fontFamily": "$font-body",
+                  "id": "rD7dq",
+                  "name": "Day",
+                  "fill": "$mist",
+                  "content": "第 3 日",
+                  "fontFamily": "Noto Sans TC",
                   "fontSize": 12,
                   "fontWeight": "normal"
                 }
@@ -353,20 +59,1985 @@
             },
             {
               "type": "frame",
-              "id": "pmPGq",
-              "name": "Price Col",
+              "id": "GAwCz",
+              "name": "Cash Chip",
+              "fill": "$paper2",
+              "cornerRadius": 16,
+              "gap": 8,
+              "padding": [
+                6,
+                12,
+                6,
+                8
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "Wtmmc",
+                  "name": "Coin",
+                  "fill": "$gold",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "text",
+                  "id": "YoZax",
+                  "name": "Cash",
+                  "fill": "$ink",
+                  "content": "$128",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yOdti",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            12,
+            20,
+            8,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "EyhAO",
+              "name": "Title Block",
+              "width": "fill_container",
               "layout": "vertical",
-              "gap": 2,
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lZmoS",
+                  "name": "Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "入貨",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "uGhgT",
+                  "name": "Sub",
+                  "fill": "$mist",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "牛油包訂單差牛油。買完即返爐。",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jPR56",
+              "name": "Categories",
+              "width": "fill_container",
+              "fill": "$paper2",
+              "cornerRadius": 14,
+              "gap": 4,
+              "padding": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "J9MXq",
+                  "name": "Cat 麵粉",
+                  "width": "fill_container",
+                  "height": 36,
+                  "fill": "#00000000",
+                  "cornerRadius": 10,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y9ilD",
+                      "name": "Cat Label",
+                      "fill": "$ink",
+                      "content": "麵粉",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x7Kux",
+                  "name": "Cat 奶品",
+                  "width": "fill_container",
+                  "height": 36,
+                  "fill": "$ink",
+                  "cornerRadius": 10,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "d8cNH8",
+                      "name": "Cat Label",
+                      "fill": "$paper2",
+                      "content": "奶品",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ieBnN",
+                  "name": "Cat 配料",
+                  "width": "fill_container",
+                  "height": 36,
+                  "fill": "#00000000",
+                  "cornerRadius": 10,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "G46An",
+                      "name": "Cat Label",
+                      "fill": "$ink",
+                      "content": "配料",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "q6MFfd",
+              "name": "Stock",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "i8dHxo",
+                  "name": "無鹽牛油",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "padding": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "RxzIi",
+                      "name": "Swatch",
+                      "fill": "#F6E7A8",
+                      "width": 44,
+                      "height": 44
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MRMod",
+                      "name": "Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lENsS",
+                          "name": "Name",
+                          "fill": "$ink",
+                          "content": "無鹽牛油",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Yn7U6",
+                          "name": "Meta",
+                          "fill": "$mist",
+                          "content": "庫存 2 · $8",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vP1F0",
+                      "name": "Stepper",
+                      "height": 36,
+                      "fill": "$paper2",
+                      "cornerRadius": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "UJ1kM",
+                          "name": "Minus",
+                          "width": 32,
+                          "height": 36,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PUlJe",
+                              "name": "Minus Glyph",
+                              "fill": "$ink",
+                              "content": "–",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "wDZgt",
+                          "name": "Qty",
+                          "fill": "$ink",
+                          "content": "1",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "o8DXtb",
+                          "name": "Plus",
+                          "width": 32,
+                          "height": 36,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "a7NIk",
+                              "name": "Plus Glyph",
+                              "fill": "$action",
+                              "content": "+",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "absiX",
+                  "name": "全脂牛奶",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "padding": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "eEhVE",
+                      "name": "Swatch",
+                      "fill": "#F7F1E4",
+                      "width": 44,
+                      "height": 44
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LwYKJ",
+                      "name": "Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kTTXH",
+                          "name": "Name",
+                          "fill": "$ink",
+                          "content": "全脂牛奶",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VvdBj",
+                          "name": "Meta",
+                          "fill": "$mist",
+                          "content": "庫存 3 · $4",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "d11L0",
+                      "name": "Stepper",
+                      "height": 36,
+                      "fill": "$paper2",
+                      "cornerRadius": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "C1vaK",
+                          "name": "Minus",
+                          "width": 32,
+                          "height": 36,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "qCGsN",
+                              "name": "Minus Glyph",
+                              "fill": "$mist",
+                              "content": "–",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "ddfb9",
+                          "name": "Qty",
+                          "fill": "$ink",
+                          "content": "0",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "PbdTG",
+                          "name": "Plus",
+                          "width": 32,
+                          "height": 36,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "fGT5o",
+                              "name": "Plus Glyph",
+                              "fill": "$action",
+                              "content": "+",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LxheW",
+                  "name": "淡忌廉",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "padding": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "VhRJp",
+                      "name": "Swatch",
+                      "fill": "#F3E2C4",
+                      "width": 44,
+                      "height": 44
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eT2xk",
+                      "name": "Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VRkWd",
+                          "name": "Name",
+                          "fill": "$ink",
+                          "content": "淡忌廉",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TlnBo",
+                          "name": "Meta",
+                          "fill": "$mist",
+                          "content": "庫存 1 · $7",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "efQWi",
+                      "name": "Stepper",
+                      "height": 36,
+                      "fill": "$paper2",
+                      "cornerRadius": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "q1HyQU",
+                          "name": "Minus",
+                          "width": 32,
+                          "height": 36,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "W2tDW",
+                              "name": "Minus Glyph",
+                              "fill": "$mist",
+                              "content": "–",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "EaaBs",
+                          "name": "Qty",
+                          "fill": "$ink",
+                          "content": "0",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Zq0hP",
+                          "name": "Plus",
+                          "width": 32,
+                          "height": 36,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "oQGzJ",
+                              "name": "Plus Glyph",
+                              "fill": "$action",
+                              "content": "+",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "T2mcm1",
+              "name": "Total Row",
+              "width": "fill_container",
+              "justifyContent": "space_between",
               "alignItems": "end",
               "children": [
                 {
                   "type": "text",
-                  "id": "iS0ci",
-                  "name": "Card Price",
-                  "fill": "$caramel",
-                  "content": "$6",
-                  "fontFamily": "$font-display",
+                  "id": "DWhBD",
+                  "name": "Total Label",
+                  "fill": "$mist",
+                  "content": "今單 1 件",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "VZV2H",
+                  "name": "Total",
+                  "fill": "$ink",
+                  "content": "$8",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FVNpx",
+              "name": "CTA",
+              "width": "fill_container",
+              "height": 52,
+              "fill": "$action",
+              "cornerRadius": 14,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P7ruA",
+                  "name": "CTA Label",
+                  "fill": "#FFFFFF",
+                  "content": "確認入貨",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RGJbj",
+          "name": "Dock",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            4,
+            16,
+            16,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "yX0ac",
+              "name": "Tab Bar",
+              "width": "fill_container",
+              "height": 58,
+              "fill": "$paper2",
+              "cornerRadius": 18,
+              "gap": 2,
+              "padding": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "en7Zg",
+                  "name": "Tab 入貨",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$soft",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "DXJrF",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "shopping-basket",
+                      "library": "lucide",
+                      "fill": "$action"
+                    },
+                    {
+                      "type": "text",
+                      "id": "U9lXfB",
+                      "name": "Tab Label",
+                      "fill": "$ink",
+                      "content": "入貨",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "i4LsTI",
+                  "name": "Tab 做包",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "DOVY0",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "wheat",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hiYoR",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "做包",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qjFd1",
+                  "name": "Tab 店面",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "W4rrKL",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "store",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rJTlf",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "店面",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "a5VBn",
+                  "name": "Tab 結算",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "CUxgc",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "receipt",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "C1m2ub",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "結算",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "kxqDB",
+      "x": 1952,
+      "y": 765,
+      "name": "做包",
+      "clip": true,
+      "width": 390,
+      "fill": "$plaster",
+      "cornerRadius": 32,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "xON18",
+          "name": "HUD",
+          "width": "fill_container",
+          "height": 72,
+          "padding": [
+            18,
+            20,
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Fex7Z",
+              "name": "Brand",
+              "layout": "vertical",
+              "gap": 1,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xiAL9",
+                  "name": "Bakery",
+                  "fill": "$ink",
+                  "content": "麥香",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "b2lx8c",
+                  "name": "Day",
+                  "fill": "$mist",
+                  "content": "第 3 日",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YabzZ",
+              "name": "Cash Chip",
+              "fill": "$paper2",
+              "cornerRadius": 16,
+              "gap": 8,
+              "padding": [
+                6,
+                12,
+                6,
+                8
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "U7ipL",
+                  "name": "Coin",
+                  "fill": "$gold",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "text",
+                  "id": "RnZeD",
+                  "name": "Cash",
+                  "fill": "$ink",
+                  "content": "$128",
+                  "fontFamily": "Fraunces",
                   "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "FjVOS",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            12,
+            20,
+            8,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZoYGh",
+              "name": "Title Block",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QACzH",
+                  "name": "Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "做包",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "p3QeFf",
+                  "name": "Sub",
+                  "fill": "$mist",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "頭位要牛油包 ×2。揀好先動手。",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "txMxu",
+              "name": "Recipes",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "XXtVB",
+                  "name": "牛油包",
+                  "width": "fill_container",
+                  "fill": "$paper2",
+                  "cornerRadius": 18,
+                  "gap": 12,
+                  "padding": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "J3wpy",
+                      "name": "Bun Art",
+                      "width": 52,
+                      "height": 44,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "EN8eL",
+                          "x": 2,
+                          "y": 18,
+                          "name": "Bun Base",
+                          "fill": "#F0C27A",
+                          "width": 48,
+                          "height": 24
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "al3Lq",
+                          "x": 10,
+                          "y": 4,
+                          "name": "Bun Top",
+                          "fill": "$shine",
+                          "width": 32,
+                          "height": 24
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tcDqf",
+                      "name": "Recipe Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "O9yOH",
+                          "name": "Recipe Head",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "L5ZVR",
+                              "name": "Recipe Name",
+                              "fill": "$ink",
+                              "content": "牛油包",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 17,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "dkPjT",
+                              "name": "State",
+                              "fill": "$leaf2",
+                              "content": "足夠",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "on7BF",
+                          "name": "Needs",
+                          "fill": "$mist",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "麵粉 · 牛油 · 糖",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EA48N",
+                  "name": "紅豆包",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 18,
+                  "gap": 12,
+                  "padding": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lRDeA",
+                      "name": "Bun Art",
+                      "width": 52,
+                      "height": 44,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "K35bx",
+                          "x": 2,
+                          "y": 18,
+                          "name": "Bun Base",
+                          "fill": "#C45C4E",
+                          "width": 48,
+                          "height": 24
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "DFcnx",
+                          "x": 10,
+                          "y": 4,
+                          "name": "Bun Top",
+                          "fill": "#E7B2A8",
+                          "width": 32,
+                          "height": 24
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z4xiPW",
+                      "name": "Recipe Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "aB5Dj",
+                          "name": "Recipe Head",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "H8dlD3",
+                              "name": "Recipe Name",
+                              "fill": "$mist",
+                              "content": "紅豆包",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 17,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "z4JZ7",
+                              "name": "State",
+                              "fill": "$berry2",
+                              "content": "缺紅豆",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "K15yYI",
+                          "name": "Needs",
+                          "fill": "$mist",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "麵粉 · 紅豆沙",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IeIM3",
+                  "name": "蒜蓉包",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 18,
+                  "gap": 12,
+                  "padding": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jxNqO",
+                      "name": "Bun Art",
+                      "width": 52,
+                      "height": 44,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "txxEN",
+                          "x": 2,
+                          "y": 18,
+                          "name": "Bun Base",
+                          "fill": "#E6D3A4",
+                          "width": 48,
+                          "height": 24
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "TbpJE",
+                          "x": 10,
+                          "y": 4,
+                          "name": "Bun Top",
+                          "fill": "$shine",
+                          "width": 32,
+                          "height": 24
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "sZubl",
+                      "name": "Recipe Info",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "NeWaZ",
+                          "name": "Recipe Head",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "zZKnv",
+                              "name": "Recipe Name",
+                              "fill": "$ink",
+                              "content": "蒜蓉包",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 17,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "GxeNj",
+                              "name": "State",
+                              "fill": "$leaf2",
+                              "content": "足夠",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "ebfuN",
+                          "name": "Needs",
+                          "fill": "$mist",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "麵粉 · 蒜 · 牛油",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ufGP1",
+              "name": "Next",
+              "fill": "$mist",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "紅豆包要先返入貨。而家做牛油包。",
+              "fontFamily": "Noto Sans TC",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ckgqW",
+              "name": "CTA",
+              "width": "fill_container",
+              "height": 52,
+              "fill": "$action",
+              "cornerRadius": 14,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "igmGw",
+                  "name": "CTA Label",
+                  "fill": "#FFFFFF",
+                  "content": "開始搓麵",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "CDknb",
+          "name": "Dock",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            4,
+            16,
+            16,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "O5480M",
+              "name": "Tab Bar",
+              "width": "fill_container",
+              "height": 58,
+              "fill": "$paper2",
+              "cornerRadius": 18,
+              "gap": 2,
+              "padding": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IAIcs",
+                  "name": "Tab 入貨",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "C0Dapf",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "shopping-basket",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "W1gmWh",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "入貨",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KO6xH",
+                  "name": "Tab 做包",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$soft",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "JXwkU",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "wheat",
+                      "library": "lucide",
+                      "fill": "$action"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zzfSj",
+                      "name": "Tab Label",
+                      "fill": "$ink",
+                      "content": "做包",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hPpY3",
+                  "name": "Tab 店面",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "q7V5SN",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "store",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NB36T",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "店面",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t9Mj2k",
+                  "name": "Tab 結算",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "MkwV6",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "receipt",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xwqlX",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "結算",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Pee4Z",
+      "x": 2398,
+      "y": 765,
+      "name": "搓麵",
+      "clip": true,
+      "width": 390,
+      "fill": "$plaster",
+      "cornerRadius": 32,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Y5qAX",
+          "name": "HUD",
+          "width": "fill_container",
+          "height": 72,
+          "padding": [
+            18,
+            20,
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Wa8H5",
+              "name": "Brand",
+              "layout": "vertical",
+              "gap": 1,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NDueV",
+                  "name": "Bakery",
+                  "fill": "$ink",
+                  "content": "麥香",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "UfhlV",
+                  "name": "Day",
+                  "fill": "$mist",
+                  "content": "第 3 日",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VoWCq",
+              "name": "Cash Chip",
+              "fill": "$paper2",
+              "cornerRadius": 16,
+              "gap": 8,
+              "padding": [
+                6,
+                12,
+                6,
+                8
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "ul6I5",
+                  "name": "Coin",
+                  "fill": "$gold",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "text",
+                  "id": "e0H8sk",
+                  "name": "Cash",
+                  "fill": "$ink",
+                  "content": "$128",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GH027",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            12,
+            20,
+            8,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "E2Gbx",
+              "name": "Step",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "whkdD",
+                  "name": "Step Label",
+                  "fill": "$action",
+                  "content": "1 / 3   搓麵",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "m5yScz",
+                  "name": "Cancel",
+                  "fill": "$mist",
+                  "content": "取消",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dkBkK",
+              "name": "Playfield",
+              "width": "fill_container",
+              "height": 340,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "mNSz4",
+                  "x": 45,
+                  "y": 16,
+                  "name": "Arc Track",
+                  "innerRadius": 0.9,
+                  "fill": "$shelf",
+                  "width": 260,
+                  "height": 260
+                },
+                {
+                  "type": "ellipse",
+                  "id": "bG04X",
+                  "x": 45,
+                  "y": 16,
+                  "name": "Arc",
+                  "innerRadius": 0.9,
+                  "startAngle": -90,
+                  "sweepAngle": 150,
+                  "fill": "$action",
+                  "width": 260,
+                  "height": 260
+                },
+                {
+                  "type": "ellipse",
+                  "id": "FHRpk",
+                  "x": 86,
+                  "y": 57,
+                  "name": "Dough",
+                  "fill": "$dough",
+                  "width": 178,
+                  "height": 178
+                },
+                {
+                  "type": "ellipse",
+                  "id": "tRe9G",
+                  "x": 124,
+                  "y": 92,
+                  "name": "Shine",
+                  "fill": "$shine",
+                  "width": 58,
+                  "height": 34
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "k6Rps",
+              "name": "Caption",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nM4Ko",
+                  "name": "Gesture",
+                  "fill": "$ink",
+                  "content": "順時針畫圈",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "kekNm",
+                  "name": "Hint",
+                  "fill": "$mist",
+                  "content": "太快會甩粉 · 光滑 42%",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "CoZa5",
+      "x": 2844,
+      "y": 765,
+      "name": "配料",
+      "clip": true,
+      "width": 390,
+      "fill": "$plaster",
+      "cornerRadius": 32,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "VfXaQ",
+          "name": "HUD",
+          "width": "fill_container",
+          "height": 72,
+          "padding": [
+            18,
+            20,
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "U2K2jA",
+              "name": "Brand",
+              "layout": "vertical",
+              "gap": 1,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gJqQ7",
+                  "name": "Bakery",
+                  "fill": "$ink",
+                  "content": "麥香",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "KjH7b",
+                  "name": "Day",
+                  "fill": "$mist",
+                  "content": "第 3 日",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UYKMI",
+              "name": "Cash Chip",
+              "fill": "$paper2",
+              "cornerRadius": 16,
+              "gap": 8,
+              "padding": [
+                6,
+                12,
+                6,
+                8
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "INXSp",
+                  "name": "Coin",
+                  "fill": "$gold",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "text",
+                  "id": "mU9UT",
+                  "name": "Cash",
+                  "fill": "$ink",
+                  "content": "$128",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SAh0B",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            12,
+            20,
+            8,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "npbZp",
+              "name": "Step",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lI8p5",
+                  "name": "Step Label",
+                  "fill": "$action",
+                  "content": "2 / 3   加配料",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "HLODt",
+                  "name": "Back",
+                  "fill": "$mist",
+                  "content": "返回",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "geKp5",
+              "name": "Board",
+              "width": "fill_container",
+              "height": 300,
+              "fill": "$shelf",
+              "cornerRadius": 24,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "idYbB",
+                  "x": 85,
+                  "y": 48,
+                  "name": "Dough",
+                  "fill": "$dough",
+                  "width": 180,
+                  "height": 180
+                },
+                {
+                  "type": "ellipse",
+                  "id": "Zkbdw",
+                  "x": 128,
+                  "y": 86,
+                  "name": "Shine",
+                  "fill": "$shine",
+                  "width": 52,
+                  "height": 30
+                },
+                {
+                  "type": "frame",
+                  "id": "x5kCpE",
+                  "x": 118,
+                  "y": 78,
+                  "name": "Zone Sesame",
+                  "fill": "$paper2",
+                  "cornerRadius": 10,
+                  "padding": [
+                    6,
+                    8
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p1NHT3",
+                      "name": "Zone Sesame Label",
+                      "fill": "$ink",
+                      "content": "芝麻",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "h28o6m",
+                  "x": 168,
+                  "y": 156,
+                  "name": "Zone Butter",
+                  "fill": "$paper2",
+                  "cornerRadius": 10,
+                  "padding": [
+                    6,
+                    8
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UHtVN",
+                      "name": "Zone Butter Label",
+                      "fill": "$action",
+                      "content": "牛油",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Epkgx",
+              "name": "Drag Hint",
+              "fill": "$mist",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "拖一項落對應位置",
+              "fontFamily": "Noto Sans TC",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "P4eCgE",
+              "name": "Tray",
+              "width": "fill_container",
+              "fill": "#E4C7A4",
+              "cornerRadius": 16,
+              "gap": 8,
+              "padding": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Om9R8",
+                  "name": "Topping 芝麻",
+                  "width": "fill_container",
+                  "fill": "$paper2",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    4
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "paI1P",
+                      "name": "Topping Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "sparkles",
+                      "library": "lucide",
+                      "fill": "$action"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F59Cpx",
+                      "name": "Topping Name",
+                      "fill": "$ink",
+                      "content": "芝麻",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ei9Zu",
+                  "name": "Topping 紅豆",
+                  "width": "fill_container",
+                  "fill": "$paper2",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    4
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "g8fPe",
+                      "name": "Topping Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "cherry",
+                      "library": "lucide",
+                      "fill": "$action"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xDSHO",
+                      "name": "Topping Name",
+                      "fill": "$ink",
+                      "content": "紅豆",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "W4U4C",
+                  "name": "Topping 牛油",
+                  "width": "fill_container",
+                  "fill": "$paper2",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    4
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "M00VEg",
+                      "name": "Topping Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "milk",
+                      "library": "lucide",
+                      "fill": "$action"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sOZAd",
+                      "name": "Topping Name",
+                      "fill": "$ink",
+                      "content": "牛油",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pmq8r",
+              "name": "CTA",
+              "width": "fill_container",
+              "height": 52,
+              "fill": "$action",
+              "cornerRadius": 14,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ochbj",
+                  "name": "CTA Label",
+                  "fill": "#FFFFFF",
+                  "content": "落爐",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
                   "fontWeight": "700"
                 }
               ]
@@ -377,238 +2048,151 @@
     },
     {
       "type": "frame",
-      "id": "XpDXs",
-      "x": 1506,
-      "y": 0,
-      "name": "01 入貨",
+      "id": "KbQfa",
+      "x": 3290,
+      "y": 765,
+      "name": "店面",
       "clip": true,
       "width": 390,
-      "fill": "$cream",
-      "cornerRadius": 28,
-      "stroke": "$line",
-      "strokeWidth": 1,
+      "fill": "$plaster",
+      "cornerRadius": 32,
       "layout": "vertical",
       "children": [
         {
-          "id": "Nv1s1",
-          "type": "ref",
-          "ref": "C27Mqw",
-          "name": "Status",
-          "width": "fill_container"
-        },
-        {
           "type": "frame",
-          "id": "iVNHL",
-          "name": "Content",
+          "id": "nMssz",
+          "name": "HUD",
           "width": "fill_container",
-          "layout": "vertical",
-          "gap": 16,
+          "height": 72,
           "padding": [
-            8,
+            18,
             20,
-            20,
+            0,
             20
           ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
           "children": [
             {
               "type": "frame",
-              "id": "mFnZJ",
-              "name": "Header",
-              "width": "fill_container",
+              "id": "I2pqV",
+              "name": "Brand",
               "layout": "vertical",
-              "gap": 4,
+              "gap": 1,
               "children": [
                 {
                   "type": "text",
-                  "id": "oP1RQ",
-                  "name": "Screen Title",
-                  "fill": "$cocoa",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "入貨",
-                  "fontFamily": "$font-body",
-                  "fontSize": 32,
+                  "id": "ZgPoN",
+                  "name": "Bakery",
+                  "fill": "$ink",
+                  "content": "麥香",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
-                  "id": "RT92Z",
-                  "name": "Screen Sub",
-                  "fill": "$muted",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "今日供應 · 買完先至做包",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
+                  "id": "N2cINq",
+                  "name": "Day",
+                  "fill": "$mist",
+                  "content": "第 3 日",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 12,
                   "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "YLDBI",
-              "name": "Chips",
+              "id": "ZIyX1",
+              "name": "Cash Chip",
+              "fill": "$paper2",
+              "cornerRadius": 16,
               "gap": 8,
+              "padding": [
+                6,
+                12,
+                6,
+                8
+              ],
+              "alignItems": "center",
               "children": [
                 {
-                  "type": "frame",
-                  "id": "rstP8",
-                  "name": "Chip 麵粉",
-                  "fill": "$cocoa",
-                  "cornerRadius": 14,
-                  "stroke": "$cocoa",
-                  "strokeWidth": 1,
-                  "padding": [
-                    8,
-                    14
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "znve6",
-                      "name": "Chip Label 麵粉",
-                      "fill": "$paper",
-                      "content": "麵粉",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
+                  "type": "ellipse",
+                  "id": "ipYDo",
+                  "name": "Coin",
+                  "fill": "$gold",
+                  "width": 18,
+                  "height": 18
                 },
                 {
-                  "type": "frame",
-                  "id": "RyRto",
-                  "name": "Chip 奶品",
-                  "fill": "$paper",
-                  "cornerRadius": 14,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "padding": [
-                    8,
-                    14
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "kcJbS",
-                      "name": "Chip Label 奶品",
-                      "fill": "$cocoa",
-                      "content": "奶品",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "nkcZ6",
-                  "name": "Chip 配料",
-                  "fill": "$paper",
-                  "cornerRadius": 14,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "padding": [
-                    8,
-                    14
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "k8Qgm",
-                      "name": "Chip Label 配料",
-                      "fill": "$cocoa",
-                      "content": "配料",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
+                  "type": "text",
+                  "id": "w6SOcl",
+                  "name": "Cash",
+                  "fill": "$ink",
+                  "content": "$128",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 18,
+                  "fontWeight": "700"
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fDhNw",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            12,
+            20,
+            8,
+            20
+          ],
+          "children": [
             {
               "type": "frame",
-              "id": "C3LQz4",
-              "name": "Ingredient List",
+              "id": "yNc9I",
+              "name": "Title Block",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 10,
+              "gap": 4,
               "children": [
                 {
-                  "id": "JMFZ2",
-                  "type": "ref",
-                  "ref": "j7EvUk",
-                  "name": "高筋麵粉",
+                  "type": "text",
+                  "id": "OGmGW",
+                  "name": "Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "descendants": {
-                    "j44NWV": {
-                      "icon": "wheat"
-                    },
-                    "O35GZ2": {
-                      "content": "高筋麵粉"
-                    },
-                    "NqUIx": {
-                      "content": "庫存 4 · 袋"
-                    },
-                    "iS0ci": {
-                      "content": "$6"
-                    }
-                  }
+                  "content": "店面",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 28,
+                  "fontWeight": "700"
                 },
                 {
-                  "id": "Yl2ZQ",
-                  "type": "ref",
-                  "ref": "j7EvUk",
-                  "name": "低筋麵粉",
+                  "type": "text",
+                  "id": "YPrOJ",
+                  "name": "Sub",
+                  "fill": "$mist",
+                  "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "descendants": {
-                    "j44NWV": {
-                      "icon": "wheat"
-                    },
-                    "O35GZ2": {
-                      "content": "低筋麵粉"
-                    },
-                    "NqUIx": {
-                      "content": "庫存 1 · 袋"
-                    },
-                    "iS0ci": {
-                      "content": "$5"
-                    }
-                  }
-                },
-                {
-                  "id": "I94PwX",
-                  "type": "ref",
-                  "ref": "j7EvUk",
-                  "name": "無鹽牛油",
-                  "width": "fill_container",
-                  "descendants": {
-                    "j44NWV": {
-                      "icon": "milk"
-                    },
-                    "O35GZ2": {
-                      "content": "無鹽牛油"
-                    },
-                    "NqUIx": {
-                      "content": "庫存 2 · 磚"
-                    },
-                    "iS0ci": {
-                      "content": "$8"
-                    }
-                  }
+                  "content": "後面仲有 2 人。先服侍頭位。",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "taozx",
-              "name": "Cart Summary",
+              "id": "n6WHX",
+              "name": "Order",
               "width": "fill_container",
-              "fill": "$cocoa",
+              "fill": "$ink",
               "cornerRadius": 18,
               "padding": [
                 14,
@@ -619,1704 +2203,1127 @@
               "children": [
                 {
                   "type": "frame",
-                  "id": "mCYtq",
-                  "name": "Cart Copy",
+                  "id": "EvvUU",
+                  "name": "Order Copy",
                   "layout": "vertical",
-                  "gap": 2,
+                  "gap": 3,
                   "children": [
                     {
                       "type": "text",
-                      "id": "yNoGm",
-                      "name": "Cart Count",
-                      "fill": "$caramel-soft",
-                      "content": "已選 2 件",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
+                      "id": "Vm3JX",
+                      "name": "Order Kicker",
+                      "fill": "$soft",
+                      "content": "頭位點單",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 12,
                       "fontWeight": "normal"
                     },
                     {
                       "type": "text",
-                      "id": "c2NHKV",
-                      "name": "Cart Hint",
-                      "fill": "$paper",
-                      "content": "高筋麵粉、無鹽牛油",
-                      "fontFamily": "$font-body",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
+                      "id": "VEyR1",
+                      "name": "Order Item",
+                      "fill": "$paper2",
+                      "content": "牛油包 ×2",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 20,
+                      "fontWeight": "700"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "FdAbh",
-                  "name": "Cart Total",
-                  "fill": "$butter",
-                  "content": "$14",
-                  "fontFamily": "$font-display",
+                  "id": "Tqlc3",
+                  "name": "Order Pay",
+                  "fill": "$gold",
+                  "content": "$24",
+                  "fontFamily": "Fraunces",
                   "fontSize": 28,
                   "fontWeight": "700"
                 }
               ]
             },
             {
-              "id": "U6YiP9",
-              "type": "ref",
-              "ref": "sLXju",
-              "name": "CTA",
-              "width": "fill_container",
-              "descendants": {
-                "iEmjy": {
-                  "content": "確認入貨"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "id": "NL3lx",
-          "type": "ref",
-          "ref": "tLAYT",
-          "name": "Tabs",
-          "width": "fill_container",
-          "descendants": {
-            "D71sQ1": {
-              "fill": "$caramel-soft"
-            },
-            "NOlTI": {
-              "fill": "$cocoa"
-            },
-            "ea1vQ": {
-              "fill": "$cocoa"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "q6Xtwg",
-      "x": 1932,
-      "y": 0,
-      "name": "02 做包",
-      "clip": true,
-      "width": 390,
-      "fill": "$cream",
-      "cornerRadius": 28,
-      "stroke": "$line",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "children": [
-        {
-          "id": "v73EN",
-          "type": "ref",
-          "ref": "C27Mqw",
-          "name": "Status",
-          "width": "fill_container"
-        },
-        {
-          "type": "frame",
-          "id": "bvIt5",
-          "name": "Content",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 16,
-          "padding": [
-            8,
-            20,
-            20,
-            20
-          ],
-          "children": [
-            {
               "type": "frame",
-              "id": "qqORr",
-              "name": "Header",
+              "id": "SUs0D",
+              "name": "Shelf",
               "width": "fill_container",
+              "fill": "$shelf",
+              "cornerRadius": 20,
               "layout": "vertical",
               "gap": 4,
+              "padding": 8,
               "children": [
                 {
-                  "type": "text",
-                  "id": "Swf4v",
-                  "name": "Screen Title",
-                  "fill": "$cocoa",
-                  "textGrowth": "fixed-width",
+                  "type": "frame",
+                  "id": "xA1Fv",
+                  "name": "Shelf Row",
                   "width": "fill_container",
-                  "content": "做包",
-                  "fontFamily": "$font-body",
-                  "fontSize": 32,
-                  "fontWeight": "700"
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bHqjj",
+                      "name": "牛油包",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        8,
+                        8,
+                        10,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "fmE5J",
+                          "name": "Loaf",
+                          "width": 78,
+                          "height": 52,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "VgYnr",
+                              "x": 6,
+                              "y": 24,
+                              "name": "Base",
+                              "fill": "#E2B15A",
+                              "width": 66,
+                              "height": 26
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "XgNd8",
+                              "x": 16,
+                              "y": 6,
+                              "name": "Crown",
+                              "fill": "#F6D48A",
+                              "width": 46,
+                              "height": 30
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "nmpHA",
+                          "name": "Loaf Name",
+                          "fill": "$ink",
+                          "content": "牛油包",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qlZEw",
+                          "name": "Loaf Meta",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uqwME",
+                              "name": "Stock",
+                              "fill": "$mist",
+                              "content": "6 件",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "BXy8k",
+                              "name": "Price",
+                              "fill": "$ink",
+                              "content": "$12",
+                              "fontFamily": "Fraunces",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "svF4D",
+                      "name": "紅豆包",
+                      "opacity": 0.4,
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        8,
+                        8,
+                        10,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "lotY8",
+                          "name": "Loaf",
+                          "width": 78,
+                          "height": 52,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "usSmF",
+                              "x": 6,
+                              "y": 24,
+                              "name": "Base",
+                              "fill": "#C45C4E",
+                              "width": 66,
+                              "height": 26
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "k3NO45",
+                              "x": 16,
+                              "y": 6,
+                              "name": "Crown",
+                              "fill": "#E7A098",
+                              "width": 46,
+                              "height": 30
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "rFePg",
+                          "name": "Loaf Name",
+                          "fill": "$ink",
+                          "content": "紅豆包",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "C5RdtM",
+                          "name": "Loaf Meta",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xwINH",
+                              "name": "Stock",
+                              "fill": "$berry2",
+                              "content": "售罄",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "O5cEn",
+                              "name": "Price",
+                              "fill": "$ink",
+                              "content": "$10",
+                              "fontFamily": "Fraunces",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "id": "supEO",
-                  "name": "Screen Sub",
-                  "fill": "$muted",
-                  "textGrowth": "fixed-width",
+                  "type": "frame",
+                  "id": "Qwdfv",
+                  "name": "Shelf Row",
                   "width": "fill_container",
-                  "content": "揀一款，自己搓同加料",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yVfuJ",
+                      "name": "蒜蓉包",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        8,
+                        8,
+                        10,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "h5yiK",
+                          "name": "Loaf",
+                          "width": 78,
+                          "height": 52,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "SuUSc",
+                              "x": 6,
+                              "y": 24,
+                              "name": "Base",
+                              "fill": "#E6D3A4",
+                              "width": 66,
+                              "height": 26
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "EoQNf",
+                              "x": 16,
+                              "y": 6,
+                              "name": "Crown",
+                              "fill": "#F4E7C4",
+                              "width": 46,
+                              "height": 30
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "RJaIL",
+                          "name": "Loaf Name",
+                          "fill": "$ink",
+                          "content": "蒜蓉包",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "rDfq9",
+                          "name": "Loaf Meta",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cRCpK",
+                              "name": "Stock",
+                              "fill": "$mist",
+                              "content": "4 件",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "tmetK",
+                              "name": "Price",
+                              "fill": "$ink",
+                              "content": "$11",
+                              "fontFamily": "Fraunces",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KoJn2",
+                      "name": "菠蘿包",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        8,
+                        8,
+                        10,
+                        8
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DAwer",
+                          "name": "Loaf",
+                          "width": 78,
+                          "height": 52,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "PESF8",
+                              "x": 6,
+                              "y": 24,
+                              "name": "Base",
+                              "fill": "#E0A84A",
+                              "width": 66,
+                              "height": 26
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "AZOgM",
+                              "x": 16,
+                              "y": 6,
+                              "name": "Crown",
+                              "fill": "#F0C56A",
+                              "width": 46,
+                              "height": 30
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "B3NBqq",
+                          "name": "Loaf Name",
+                          "fill": "$ink",
+                          "content": "菠蘿包",
+                          "fontFamily": "Noto Sans TC",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qmiWc",
+                          "name": "Loaf Meta",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Ch2L5",
+                              "name": "Stock",
+                              "fill": "$mist",
+                              "content": "2 件",
+                              "fontFamily": "Noto Sans TC",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Q7SdAC",
+                              "name": "Price",
+                              "fill": "$ink",
+                              "content": "$13",
+                              "fontFamily": "Fraunces",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "IFzKg",
-              "name": "Recipes",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 10,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "dNJSZ",
-                  "name": "牛油包",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 18,
-                  "stroke": "$caramel",
-                  "strokeWidth": 2,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 14,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "ZzOaU",
-                      "name": "Recipe Top",
-                      "width": "fill_container",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "xueHi",
-                          "name": "Recipe Name",
-                          "fill": "$cocoa",
-                          "content": "牛油包",
-                          "fontFamily": "$font-body",
-                          "fontSize": 18,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "Y0XFjM",
-                          "name": "Badge",
-                          "fill": "#E4F3EA",
-                          "cornerRadius": 10,
-                          "padding": [
-                            4,
-                            8
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "Bbyjk",
-                              "name": "Badge Label",
-                              "fill": "$leaf",
-                              "content": "足夠",
-                              "fontFamily": "$font-body",
-                              "fontSize": 12,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "PcrmX",
-                      "name": "Needs",
-                      "fill": "$muted",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "高筋麵粉 · 牛油 · 糖",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "aHs0L",
-                  "name": "紅豆包",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 18,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 14,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "P5lyK",
-                      "name": "Recipe Top",
-                      "width": "fill_container",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "gkqVr",
-                          "name": "Recipe Name",
-                          "fill": "$cocoa",
-                          "content": "紅豆包",
-                          "fontFamily": "$font-body",
-                          "fontSize": 18,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "ajqC2",
-                          "name": "Badge",
-                          "fill": "#F8E6E3",
-                          "cornerRadius": 10,
-                          "padding": [
-                            4,
-                            8
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "N5TxfY",
-                              "name": "Badge Label",
-                              "fill": "$berry",
-                              "content": "缺紅豆",
-                              "fontFamily": "$font-body",
-                              "fontSize": 12,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "GGfBQ",
-                      "name": "Needs",
-                      "fill": "$muted",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "高筋麵粉 · 紅豆沙",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "nu7gh",
-                  "name": "蒜蓉包",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 18,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 14,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "h90Hp",
-                      "name": "Recipe Top",
-                      "width": "fill_container",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "fkeKv",
-                          "name": "Recipe Name",
-                          "fill": "$cocoa",
-                          "content": "蒜蓉包",
-                          "fontFamily": "$font-body",
-                          "fontSize": 18,
-                          "fontWeight": "700"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "AIY3B",
-                          "name": "Badge",
-                          "fill": "#E4F3EA",
-                          "cornerRadius": 10,
-                          "padding": [
-                            4,
-                            8
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "rxZIp",
-                              "name": "Badge Label",
-                              "fill": "$leaf",
-                              "content": "足夠",
-                              "fontFamily": "$font-body",
-                              "fontSize": 12,
-                              "fontWeight": "700"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "WSoG9",
-                      "name": "Needs",
-                      "fill": "$muted",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "高筋麵粉 · 蒜蓉 · 牛油",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "iZ67J",
-              "type": "ref",
-              "ref": "sLXju",
+              "id": "HzTH4",
               "name": "CTA",
               "width": "fill_container",
-              "descendants": {
-                "iEmjy": {
-                  "content": "開始做包"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "id": "hyz94",
-          "type": "ref",
-          "ref": "tLAYT",
-          "name": "Tabs",
-          "width": "fill_container",
-          "descendants": {
-            "f62tl": {
-              "fill": "$caramel-soft"
-            },
-            "hYY7p": {
-              "fill": "$cocoa"
-            },
-            "crox0": {
-              "fill": "$cocoa"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "zoNL5",
-      "x": 2358,
-      "y": 0,
-      "name": "03 搓麵",
-      "clip": true,
-      "width": 390,
-      "fill": "$cream",
-      "cornerRadius": 28,
-      "stroke": "$line",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "children": [
-        {
-          "id": "xGAsD",
-          "type": "ref",
-          "ref": "C27Mqw",
-          "name": "Status",
-          "width": "fill_container"
-        },
-        {
-          "type": "frame",
-          "id": "bzLt8",
-          "name": "Content",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 16,
-          "padding": [
-            8,
-            20,
-            24,
-            20
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "bn4XT",
-              "name": "Step Row",
-              "width": "fill_container",
-              "justifyContent": "space_between",
+              "height": 52,
+              "fill": "$action",
+              "cornerRadius": 14,
+              "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
                   "type": "text",
-                  "id": "G8jgG",
-                  "name": "Step",
-                  "fill": "$caramel",
-                  "content": "步驟 1 / 3",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "Zjqqa",
-                  "name": "Cancel",
-                  "fill": "$muted",
-                  "content": "取消",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "600"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "lZDEG",
-              "name": "Header",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "TIE4m",
-                  "name": "Screen Title",
-                  "fill": "$cocoa",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "搓麵團",
-                  "fontFamily": "$font-body",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "b94TeL",
-                  "name": "Screen Sub",
-                  "fill": "$muted",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "用手指畫圈，搓到麵團光滑",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "Ibr6R",
-              "name": "Stage",
-              "width": "fill_container",
-              "height": 360,
-              "layout": "none",
-              "children": [
-                {
-                  "type": "ellipse",
-                  "id": "CakDf",
-                  "x": 35,
-                  "y": 20,
-                  "name": "Track",
-                  "fill": "#00000000",
-                  "width": 280,
-                  "height": 280,
-                  "stroke": "$line",
-                  "strokeWidth": 14
-                },
-                {
-                  "type": "ellipse",
-                  "id": "F00oGi",
-                  "x": 35,
-                  "y": 20,
-                  "name": "Progress",
-                  "startAngle": -90,
-                  "sweepAngle": 150,
-                  "fill": "#00000000",
-                  "width": 280,
-                  "height": 280,
-                  "stroke": "$caramel",
-                  "strokeWidth": 14
-                },
-                {
-                  "type": "ellipse",
-                  "id": "c8bbQ",
-                  "x": 78,
-                  "y": 63,
-                  "name": "Dough",
-                  "fill": "#F3C98A",
-                  "width": 194,
-                  "height": 194
-                },
-                {
-                  "type": "ellipse",
-                  "id": "mbK8w",
-                  "x": 112,
-                  "y": 92,
-                  "name": "Dough Highlight",
-                  "opacity": 0.9,
-                  "fill": "#FFE6BE",
-                  "width": 70,
-                  "height": 46
-                },
-                {
-                  "type": "text",
-                  "id": "AUS2z",
-                  "x": 118,
-                  "y": 148,
-                  "name": "Gesture",
-                  "fill": "$cocoa",
-                  "content": "↺ 畫圈",
-                  "fontFamily": "$font-body",
+                  "id": "mv9Jm",
+                  "name": "CTA Label",
+                  "fill": "#FFFFFF",
+                  "content": "賣出 $24",
+                  "fontFamily": "Noto Sans TC",
                   "fontSize": 16,
                   "fontWeight": "700"
                 }
               ]
-            },
-            {
-              "type": "frame",
-              "id": "cpISQ",
-              "name": "Meter",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "hIEUt",
-                  "name": "Meter Label",
-                  "fill": "$cocoa",
-                  "content": "光滑度 42%",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "frame",
-                  "id": "lAO6w",
-                  "name": "Meter Track",
-                  "width": "fill_container",
-                  "height": 10,
-                  "fill": "$flour",
-                  "cornerRadius": 8,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "atTwL",
-                      "name": "Meter Fill",
-                      "width": 140,
-                      "height": 10,
-                      "fill": "$caramel",
-                      "cornerRadius": 8
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "mmpe4",
-              "name": "Hint",
-              "fill": "$muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "保持畫圈，太快會甩粉",
-              "fontFamily": "$font-body",
-              "fontSize": 13,
-              "fontWeight": "normal"
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "wL7St",
-      "x": 2784,
-      "y": 0,
-      "name": "04 配料",
-      "clip": true,
-      "width": 390,
-      "fill": "$cream",
-      "cornerRadius": 28,
-      "stroke": "$line",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "children": [
-        {
-          "id": "uYgkR",
-          "type": "ref",
-          "ref": "C27Mqw",
-          "name": "Status",
-          "width": "fill_container"
         },
         {
           "type": "frame",
-          "id": "a1rwxk",
-          "name": "Content",
+          "id": "Sz0pK",
+          "name": "Dock",
           "width": "fill_container",
           "layout": "vertical",
-          "gap": 16,
           "padding": [
-            8,
-            20,
-            24,
-            20
+            4,
+            16,
+            16,
+            16
           ],
           "children": [
             {
               "type": "frame",
-              "id": "jWmE7",
-              "name": "Step Row",
+              "id": "a99xKS",
+              "name": "Tab Bar",
               "width": "fill_container",
-              "justifyContent": "space_between",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "LkOK3",
-                  "name": "Step",
-                  "fill": "$caramel",
-                  "content": "步驟 2 / 3",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "xyAJE",
-                  "name": "Back",
-                  "fill": "$muted",
-                  "content": "返回搓麵",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "600"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ssA5Y",
-              "name": "Header",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "FcNZb",
-                  "name": "Screen Title",
-                  "fill": "$cocoa",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "加配料",
-                  "fontFamily": "$font-body",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "blZD0",
-                  "name": "Screen Sub",
-                  "fill": "$muted",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "拖落麵團上面指定位置",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "Gfrhf",
-              "name": "Board",
-              "width": "fill_container",
-              "height": 320,
-              "fill": "$flour",
-              "cornerRadius": 24,
-              "layout": "none",
-              "children": [
-                {
-                  "type": "ellipse",
-                  "id": "SAfWQ",
-                  "x": 85,
-                  "y": 55,
-                  "name": "Dough",
-                  "fill": "#F3C98A",
-                  "width": 180,
-                  "height": 180
-                },
-                {
-                  "type": "ellipse",
-                  "id": "vMjZw",
-                  "x": 118,
-                  "y": 78,
-                  "name": "Zone Sesame",
-                  "fill": "#00000000",
-                  "width": 54,
-                  "height": 54,
-                  "stroke": "$cocoa",
-                  "strokeWidth": 2
-                },
-                {
-                  "type": "text",
-                  "id": "o2QIoP",
-                  "x": 126,
-                  "y": 96,
-                  "name": "Zone Label",
-                  "fill": "$cocoa",
-                  "content": "芝麻",
-                  "fontFamily": "$font-body",
-                  "fontSize": 12,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "ellipse",
-                  "id": "dfMX4",
-                  "x": 168,
-                  "y": 150,
-                  "name": "Zone Butter",
-                  "fill": "#00000000",
-                  "width": 54,
-                  "height": 54,
-                  "stroke": "$caramel",
-                  "strokeWidth": 2
-                },
-                {
-                  "type": "text",
-                  "id": "ZBbFI",
-                  "x": 176,
-                  "y": 168,
-                  "name": "Zone Butter Label",
-                  "fill": "$caramel",
-                  "content": "牛油",
-                  "fontFamily": "$font-body",
-                  "fontSize": 12,
-                  "fontWeight": "700"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "rQGKk",
-              "name": "Tray",
-              "width": "fill_container",
-              "gap": 10,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "BbXKy",
-                  "name": "Topping 芝麻",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 16,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 6,
-                  "padding": [
-                    12,
-                    8
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon",
-                      "id": "Kt2u4",
-                      "name": "Topping Icon",
-                      "width": 22,
-                      "height": 22,
-                      "icon": "sparkles",
-                      "library": "lucide",
-                      "fill": "$caramel"
-                    },
-                    {
-                      "type": "text",
-                      "id": "GgSmV",
-                      "name": "Topping Label",
-                      "fill": "$cocoa",
-                      "content": "芝麻",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "dcm3f",
-                  "name": "Topping 紅豆",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 16,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 6,
-                  "padding": [
-                    12,
-                    8
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon",
-                      "id": "p466e",
-                      "name": "Topping Icon",
-                      "width": 22,
-                      "height": 22,
-                      "icon": "cherry",
-                      "library": "lucide",
-                      "fill": "$caramel"
-                    },
-                    {
-                      "type": "text",
-                      "id": "b4LDf7",
-                      "name": "Topping Label",
-                      "fill": "$cocoa",
-                      "content": "紅豆",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "B5g28",
-                  "name": "Topping 牛油",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 16,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 6,
-                  "padding": [
-                    12,
-                    8
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon",
-                      "id": "dtD4o",
-                      "name": "Topping Icon",
-                      "width": 22,
-                      "height": 22,
-                      "icon": "milk",
-                      "library": "lucide",
-                      "fill": "$caramel"
-                    },
-                    {
-                      "type": "text",
-                      "id": "D6BWLB",
-                      "name": "Topping Label",
-                      "fill": "$cocoa",
-                      "content": "牛油",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "700"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "fUYoD",
-              "type": "ref",
-              "ref": "sLXju",
-              "name": "CTA",
-              "width": "fill_container",
-              "descendants": {
-                "iEmjy": {
-                  "content": "完成做包"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "W1lGu5",
-      "x": 3210,
-      "y": 0,
-      "name": "05 店面",
-      "clip": true,
-      "width": 390,
-      "fill": "$cream",
-      "cornerRadius": 28,
-      "stroke": "$line",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "children": [
-        {
-          "id": "I3o08S",
-          "type": "ref",
-          "ref": "C27Mqw",
-          "name": "Status",
-          "width": "fill_container"
-        },
-        {
-          "type": "frame",
-          "id": "rikIq",
-          "name": "Content",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 16,
-          "padding": [
-            8,
-            20,
-            20,
-            20
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "GTgmB",
-              "name": "Header",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "OhQ4h",
-                  "name": "Screen Title",
-                  "fill": "$cocoa",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "店面",
-                  "fontFamily": "$font-body",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "o0Lle",
-                  "name": "Screen Sub",
-                  "fill": "$muted",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "上架、等客、開價",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "jZAOg",
-              "name": "Queue",
-              "width": "fill_container",
-              "fill": "$paper",
+              "height": 58,
+              "fill": "$paper2",
               "cornerRadius": 18,
-              "stroke": "$line",
-              "strokeWidth": 1,
-              "gap": 10,
-              "padding": 12,
+              "gap": 2,
+              "padding": 4,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "fQ1Xc",
-                  "name": "Faces",
-                  "gap": -8,
-                  "children": [
-                    {
-                      "type": "ellipse",
-                      "id": "d9PE3P",
-                      "name": "Customer",
-                      "fill": "#E7B34A",
-                      "width": 32,
-                      "height": 32,
-                      "stroke": "$paper",
-                      "strokeWidth": 2
-                    },
-                    {
-                      "type": "ellipse",
-                      "id": "IPkQw",
-                      "name": "Customer",
-                      "fill": "#C56A2D",
-                      "width": 32,
-                      "height": 32,
-                      "stroke": "$paper",
-                      "strokeWidth": 2
-                    },
-                    {
-                      "type": "ellipse",
-                      "id": "tu8J0",
-                      "name": "Customer",
-                      "fill": "#F6D7B8",
-                      "width": 32,
-                      "height": 32,
-                      "stroke": "$paper",
-                      "strokeWidth": 2
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "i6udc",
-                  "name": "Queue Copy",
+                  "id": "ZmcXt",
+                  "name": "Tab 入貨",
                   "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
                   "layout": "vertical",
                   "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "Qg87X",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "shopping-basket",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wxZza",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "入貨",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hMlor",
+                  "name": "Tab 做包",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "OipGU",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "wheat",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NlsDz",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "做包",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "T0ulyX",
+                  "name": "Tab 店面",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$soft",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "YdvK8",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "store",
+                      "library": "lucide",
+                      "fill": "$action"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fyOSC",
+                      "name": "Tab Label",
+                      "fill": "$ink",
+                      "content": "店面",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hcUuo",
+                  "name": "Tab 結算",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "jkmbe",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "receipt",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KYqMx",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "結算",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "LEWmN",
+      "x": 3736,
+      "y": 765,
+      "name": "結算",
+      "clip": true,
+      "width": 390,
+      "fill": "$plaster",
+      "cornerRadius": 32,
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "QrTh8",
+          "name": "HUD",
+          "width": "fill_container",
+          "height": 72,
+          "padding": [
+            18,
+            20,
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "imfu3",
+              "name": "Brand",
+              "layout": "vertical",
+              "gap": 1,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gZdDc",
+                  "name": "Bakery",
+                  "fill": "$ink",
+                  "content": "麥香",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Yo4PA",
+                  "name": "Day",
+                  "fill": "$mist",
+                  "content": "第 3 日",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DSH0O",
+              "name": "Cash Chip",
+              "fill": "$paper2",
+              "cornerRadius": 16,
+              "gap": 8,
+              "padding": [
+                6,
+                12,
+                6,
+                8
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "h4zyup",
+                  "name": "Coin",
+                  "fill": "$gold",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "text",
+                  "id": "b5DC1F",
+                  "name": "Cash",
+                  "fill": "$ink",
+                  "content": "$128",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xyNcu",
+          "name": "Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            12,
+            20,
+            8,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "v3lz6P",
+              "name": "Title Block",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BFnmv",
+                  "name": "Title",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "結算",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "lQU5N",
+                  "name": "Sub",
+                  "fill": "$mist",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "打烊。呢日訂單做完。",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "klN7f",
+              "name": "Receipt",
+              "width": "fill_container",
+              "fill": "$paper2",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                18,
+                18,
+                16,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "O1zv1",
+                  "name": "Shop",
+                  "fill": "$ink",
+                  "content": "麥香麵包",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "WHgi4",
+                  "name": "When",
+                  "fill": "$mist",
+                  "content": "第 3 日 · 售出 8 件",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "WGycK",
+                  "name": "營業額",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
-                      "id": "ba56J",
-                      "name": "Queue Title",
-                      "fill": "$cocoa",
-                      "content": "排隊 3 人",
-                      "fontFamily": "$font-body",
+                      "id": "a7GCgE",
+                      "name": "Line",
+                      "fill": "$mist",
+                      "content": "營業額",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PnXu4",
+                      "name": "Amount",
+                      "fill": "$ink",
+                      "content": "$140",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gBDW1",
+                  "name": "原料",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YzReM",
+                      "name": "Line",
+                      "fill": "$mist",
+                      "content": "原料",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "w2z7YN",
+                      "name": "Amount",
+                      "fill": "$berry2",
+                      "content": "-$42",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x1WRoj",
+                  "name": "報廢",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pifkz",
+                      "name": "Line",
+                      "fill": "$mist",
+                      "content": "報廢",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qXHmD",
+                      "name": "Amount",
+                      "fill": "$berry2",
+                      "content": "-$12",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sYnlD",
+                  "name": "Rule",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "$shelf"
+                },
+                {
+                  "type": "frame",
+                  "id": "NW7lY",
+                  "name": "Net",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dFN3F",
+                      "name": "Net Label",
+                      "fill": "$ink",
+                      "content": "淨賺",
+                      "fontFamily": "Noto Sans TC",
                       "fontSize": 14,
                       "fontWeight": "700"
                     },
                     {
                       "type": "text",
-                      "id": "izEip",
-                      "name": "Order",
-                      "fill": "$muted",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "頭位想要牛油包 ×2",
-                      "fontFamily": "$font-body",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
+                      "id": "YT36v",
+                      "name": "Net Value",
+                      "fill": "$ink",
+                      "content": "+$86",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 36,
+                      "fontWeight": "700"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "id": "sRcMk",
+                  "name": "Delta",
+                  "fill": "$leaf2",
+                  "content": "比昨日多 $12",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "N4h2w",
-              "name": "Shelf Row",
-              "width": "fill_container",
-              "gap": 10,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "VXLnI",
-                  "name": "牛油包",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 18,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 12,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "jNriG",
-                      "name": "Loaf",
-                      "width": "fill_container",
-                      "height": 72,
-                      "fill": "#F3C98A",
-                      "cornerRadius": 14
-                    },
-                    {
-                      "type": "text",
-                      "id": "iNGG9",
-                      "name": "Loaf Name",
-                      "fill": "$cocoa",
-                      "content": "牛油包",
-                      "fontFamily": "$font-body",
-                      "fontSize": 15,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "V4gL8",
-                      "name": "Loaf Meta",
-                      "width": "fill_container",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "Y29hP",
-                          "name": "Stock",
-                          "fill": "$muted",
-                          "content": "6 件",
-                          "fontFamily": "$font-body",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "gLSfR",
-                          "name": "Price",
-                          "fill": "$caramel",
-                          "content": "$12",
-                          "fontFamily": "$font-display",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "PMTPB",
-                  "name": "紅豆包",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 18,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 12,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "Qadgw",
-                      "name": "Loaf",
-                      "width": "fill_container",
-                      "height": 72,
-                      "fill": "#C45A4A",
-                      "cornerRadius": 14
-                    },
-                    {
-                      "type": "text",
-                      "id": "PezAd",
-                      "name": "Loaf Name",
-                      "fill": "$cocoa",
-                      "content": "紅豆包",
-                      "fontFamily": "$font-body",
-                      "fontSize": 15,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "ZYjDS",
-                      "name": "Loaf Meta",
-                      "width": "fill_container",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "HHeTX",
-                          "name": "Stock",
-                          "fill": "$berry",
-                          "content": "售罄",
-                          "fontFamily": "$font-body",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "yT7GO",
-                          "name": "Price",
-                          "fill": "$caramel",
-                          "content": "$10",
-                          "fontFamily": "$font-display",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "xPUfW",
-              "name": "Shelf Row",
-              "width": "fill_container",
-              "gap": 10,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "fLLNt",
-                  "name": "蒜蓉包",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 18,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 12,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "WXG0L",
-                      "name": "Loaf",
-                      "width": "fill_container",
-                      "height": 72,
-                      "fill": "#E7D3A1",
-                      "cornerRadius": 14
-                    },
-                    {
-                      "type": "text",
-                      "id": "htLZ5",
-                      "name": "Loaf Name",
-                      "fill": "$cocoa",
-                      "content": "蒜蓉包",
-                      "fontFamily": "$font-body",
-                      "fontSize": 15,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "uWQ61",
-                      "name": "Loaf Meta",
-                      "width": "fill_container",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "obRxj",
-                          "name": "Stock",
-                          "fill": "$muted",
-                          "content": "4 件",
-                          "fontFamily": "$font-body",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "rmmWx",
-                          "name": "Price",
-                          "fill": "$caramel",
-                          "content": "$11",
-                          "fontFamily": "$font-display",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "FXkLM",
-                  "name": "菠蘿包",
-                  "width": "fill_container",
-                  "fill": "$paper",
-                  "cornerRadius": 18,
-                  "stroke": "$line",
-                  "strokeWidth": 1,
-                  "layout": "vertical",
-                  "gap": 8,
-                  "padding": 12,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "MoYoI",
-                      "name": "Loaf",
-                      "width": "fill_container",
-                      "height": 72,
-                      "fill": "#E7B34A",
-                      "cornerRadius": 14
-                    },
-                    {
-                      "type": "text",
-                      "id": "p4lY4",
-                      "name": "Loaf Name",
-                      "fill": "$cocoa",
-                      "content": "菠蘿包",
-                      "fontFamily": "$font-body",
-                      "fontSize": 15,
-                      "fontWeight": "700"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "D8HsKn",
-                      "name": "Loaf Meta",
-                      "width": "fill_container",
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "Ag7VG",
-                          "name": "Stock",
-                          "fill": "$muted",
-                          "content": "2 件",
-                          "fontFamily": "$font-body",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "oL2SN",
-                          "name": "Price",
-                          "fill": "$caramel",
-                          "content": "$13",
-                          "fontFamily": "$font-display",
-                          "fontSize": 16,
-                          "fontWeight": "700"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "SAOrx",
-              "type": "ref",
-              "ref": "sLXju",
+              "id": "J1OXNW",
               "name": "CTA",
               "width": "fill_container",
-              "descendants": {
-                "iEmjy": {
-                  "content": "賣給頭位客人"
+              "height": 52,
+              "fill": "$action",
+              "cornerRadius": 14,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WFYA4",
+                  "name": "CTA Label",
+                  "fill": "#FFFFFF",
+                  "content": "開始下一日",
+                  "fontFamily": "Noto Sans TC",
+                  "fontSize": 16,
+                  "fontWeight": "700"
                 }
-              }
+              ]
             }
           ]
         },
         {
-          "id": "ryhQz",
-          "type": "ref",
-          "ref": "tLAYT",
-          "name": "Tabs",
-          "width": "fill_container",
-          "descendants": {
-            "ODMc5": {
-              "fill": "$caramel-soft"
-            },
-            "AiCli": {
-              "fill": "$cocoa"
-            },
-            "m0hEgZ": {
-              "fill": "$cocoa"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "T85C5L",
-      "x": 3636,
-      "y": 0,
-      "name": "06 結算",
-      "clip": true,
-      "width": 390,
-      "fill": "$cream",
-      "cornerRadius": 28,
-      "stroke": "$line",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "children": [
-        {
-          "id": "LFhMz",
-          "type": "ref",
-          "ref": "C27Mqw",
-          "name": "Status",
-          "width": "fill_container"
-        },
-        {
           "type": "frame",
-          "id": "ximY2",
-          "name": "Content",
+          "id": "lWk6F",
+          "name": "Dock",
           "width": "fill_container",
           "layout": "vertical",
-          "gap": 16,
           "padding": [
-            8,
-            20,
-            20,
-            20
+            4,
+            16,
+            16,
+            16
           ],
           "children": [
             {
               "type": "frame",
-              "id": "Qixpy",
-              "name": "Header",
+              "id": "ctw7W",
+              "name": "Tab Bar",
               "width": "fill_container",
-              "layout": "vertical",
-              "gap": 4,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "F98SWD",
-                  "name": "Screen Title",
-                  "fill": "$cocoa",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "結算",
-                  "fontFamily": "$font-body",
-                  "fontSize": 32,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "fgJP6",
-                  "name": "Screen Sub",
-                  "fill": "$muted",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "第 3 日 · 打烊",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "xtIxS",
-              "name": "Profit Hero",
-              "width": "fill_container",
-              "fill": "$cocoa",
-              "cornerRadius": 22,
-              "layout": "vertical",
-              "gap": 4,
-              "padding": 18,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "kf79l",
-                  "name": "Profit Label",
-                  "fill": "$caramel-soft",
-                  "content": "今日淨賺",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "mEokp",
-                  "name": "Profit",
-                  "fill": "$butter",
-                  "content": "+$86",
-                  "fontFamily": "$font-display",
-                  "fontSize": 48,
-                  "fontWeight": "700"
-                },
-                {
-                  "type": "text",
-                  "id": "QU5Cq",
-                  "name": "Profit Note",
-                  "fill": "$paper",
-                  "content": "比昨日多 $12",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "R1e9v",
-              "name": "Ledger",
-              "width": "fill_container",
-              "fill": "$paper",
+              "height": 58,
+              "fill": "$paper2",
               "cornerRadius": 18,
-              "stroke": "$line",
-              "strokeWidth": 1,
-              "layout": "vertical",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "IweBo",
-                  "name": "營業額",
-                  "width": "fill_container",
-                  "stroke": "#00000000",
-                  "padding": [
-                    14,
-                    16
-                  ],
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "nPKio",
-                      "name": "Ledger Label",
-                      "fill": "$cocoa",
-                      "content": "營業額",
-                      "fontFamily": "$font-body",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "vGfcs",
-                      "name": "Ledger Value",
-                      "fill": "$cocoa",
-                      "content": "$140",
-                      "fontFamily": "$font-display",
-                      "fontSize": 18,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "URyRt",
-                  "name": "原料成本",
-                  "width": "fill_container",
-                  "stroke": "$line",
-                  "strokeWidth": {
-                    "top": 1
-                  },
-                  "padding": [
-                    14,
-                    16
-                  ],
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "q2ltwi",
-                      "name": "Ledger Label",
-                      "fill": "$cocoa",
-                      "content": "原料成本",
-                      "fontFamily": "$font-body",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "G195i1",
-                      "name": "Ledger Value",
-                      "fill": "$berry",
-                      "content": "-$42",
-                      "fontFamily": "$font-display",
-                      "fontSize": 18,
-                      "fontWeight": "700"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "Q6lo9",
-                  "name": "報廢損耗",
-                  "width": "fill_container",
-                  "stroke": "$line",
-                  "strokeWidth": {
-                    "top": 1
-                  },
-                  "padding": [
-                    14,
-                    16
-                  ],
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "dPz16",
-                      "name": "Ledger Label",
-                      "fill": "$cocoa",
-                      "content": "報廢損耗",
-                      "fontFamily": "$font-body",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "text",
-                      "id": "o69wo4",
-                      "name": "Ledger Value",
-                      "fill": "$berry",
-                      "content": "-$12",
-                      "fontFamily": "$font-display",
-                      "fontSize": 18,
-                      "fontWeight": "700"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "ggcBl",
-              "name": "Tomorrow",
-              "width": "fill_container",
-              "fill": "$caramel-soft",
-              "cornerRadius": 16,
-              "gap": 10,
-              "padding": 14,
+              "gap": 2,
+              "padding": 4,
               "alignItems": "center",
               "children": [
                 {
-                  "type": "icon",
-                  "id": "R5VTRX",
-                  "name": "Star",
-                  "width": 18,
-                  "height": 18,
-                  "icon": "star",
-                  "library": "lucide",
-                  "fill": "$caramel"
+                  "type": "frame",
+                  "id": "fAGKQ",
+                  "name": "Tab 入貨",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "W6vzw7",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "shopping-basket",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ij1oD",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "入貨",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "id": "dIesd",
-                  "name": "Tomorrow Copy",
-                  "fill": "$cocoa",
-                  "textGrowth": "fixed-width",
+                  "type": "frame",
+                  "id": "y4dP2x",
+                  "name": "Tab 做包",
                   "width": "fill_container",
-                  "content": "聽日目標：賣出 20 件",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "600"
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "YbyMy",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "wheat",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g5N9l",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "做包",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jCRf3",
+                  "name": "Tab 店面",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#00000000",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "QQ8Fa",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "store",
+                      "library": "lucide",
+                      "fill": "$mist"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TC84S",
+                      "name": "Tab Label",
+                      "fill": "$mist",
+                      "content": "店面",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ucusu",
+                  "name": "Tab 結算",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$soft",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 2,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "u1SFYO",
+                      "name": "Tab Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "receipt",
+                      "library": "lucide",
+                      "fill": "$action"
+                    },
+                    {
+                      "type": "text",
+                      "id": "glPMP",
+                      "name": "Tab Label",
+                      "fill": "$ink",
+                      "content": "結算",
+                      "fontFamily": "Noto Sans TC",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    }
+                  ]
                 }
               ]
-            },
-            {
-              "id": "nIZsV",
-              "type": "ref",
-              "ref": "sLXju",
-              "name": "CTA",
-              "width": "fill_container",
-              "descendants": {
-                "iEmjy": {
-                  "content": "開始下一日"
-                }
-              }
             }
           ]
-        },
-        {
-          "id": "bYI3v",
-          "type": "ref",
-          "ref": "tLAYT",
-          "name": "Tabs",
-          "width": "fill_container",
-          "descendants": {
-            "RXs6g": {
-              "fill": "$caramel-soft"
-            },
-            "z7DggE": {
-              "fill": "$cocoa"
-            },
-            "dDy74": {
-              "fill": "$cocoa"
-            }
-          }
         }
       ]
     }
@@ -2377,6 +3384,54 @@
     "font-display": {
       "type": "string",
       "value": "Fraunces"
+    },
+    "plaster": {
+      "type": "color",
+      "value": "#F3E7D8"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#2A1C16"
+    },
+    "action": {
+      "type": "color",
+      "value": "#C65D2E"
+    },
+    "gold": {
+      "type": "color",
+      "value": "#B8862E"
+    },
+    "paper2": {
+      "type": "color",
+      "value": "#FFFCF8"
+    },
+    "mist": {
+      "type": "color",
+      "value": "#8C7568"
+    },
+    "dough": {
+      "type": "color",
+      "value": "#F0C27A"
+    },
+    "shine": {
+      "type": "color",
+      "value": "#FFE6C2"
+    },
+    "shelf": {
+      "type": "color",
+      "value": "#E9D8C4"
+    },
+    "leaf2": {
+      "type": "color",
+      "value": "#2C6B48"
+    },
+    "berry2": {
+      "type": "color",
+      "value": "#A33B32"
+    },
+    "soft": {
+      "type": "color",
+      "value": "#F6DCC8"
     }
   },
   "fileToken": "deb616cd-2b5c-4a7d-b995-333e057931e5"
