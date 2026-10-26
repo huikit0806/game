@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#F7E4C8" />
+    <title>小暖麵包店</title>
+    <style>
+      @font-face {
+        font-family: GameSans;
+        src: url("/fonts/GameSans.ttf") format("truetype");
+        font-weight: 400 700;
+        font-display: swap;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #f3dcc0;
+        overflow: hidden;
+        touch-action: none;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      #game {
+        width: 100%;
+        height: 100%;
+      }
+      #game canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
