@@ -79,8 +79,9 @@ export function progressBar(
   y: number,
   w: number,
   h: number,
+  depth = 0,
 ): { set: (t: number) => void; destroy: () => void } {
-  const g = scene.add.graphics();
+  const g = scene.add.graphics().setDepth(depth);
   const set = (t: number) => {
     const p = Phaser.Math.Clamp(t, 0, 1);
     g.clear();
@@ -106,6 +107,20 @@ export function topBar(scene: Phaser.Scene, title: string, cash: number, day: nu
     .text(width - 28, 34, `$${cash}`, textStyle(20, "#c45c28", { fontStyle: "bold" }))
     .setOrigin(1, 0.5)
     .setName("cashLabel");
+}
+
+/** 賣出／出爐的數字上浮。 */
+export function floatText(scene: Phaser.Scene, x: number, y: number, msg: string, color = "#c45c28"): void {
+  const t = scene.add.text(x, y, msg, textStyle(18, color)).setOrigin(0.5).setDepth(30);
+  scene.tweens.add({
+    targets: t,
+    y: y - 36,
+    alpha: 0,
+    scale: 1.15,
+    duration: 520,
+    ease: "Cubic.easeOut",
+    onComplete: () => t.destroy(),
+  });
 }
 
 export function toast(scene: Phaser.Scene, msg: string): void {

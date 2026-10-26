@@ -15,6 +15,22 @@ describe("GameState day loop", () => {
     expect(g.trayLoaves()[0].recipeId).toBe("white");
   });
 
+  it("does not run the shop clock until a loaf is shelved", () => {
+    const g = new GameState();
+    g.consumeCraft("white");
+    g.startOven("white", 100);
+    g.tickKitchen(20);
+    g.startShop();
+    const before = g.shopTime;
+    g.tickShop(2);
+    expect(g.shopTime).toBe(before);
+    expect(g.customers).toHaveLength(0);
+    expect(g.stockShelves()).toBe(1);
+    expect(g.shelfLoaves(0)).toHaveLength(1);
+    g.tickShop(1);
+    expect(g.shopTime).toBeLessThan(before);
+  });
+
   it("sells a shelved loaf and records the day", () => {
     const g = new GameState();
     g.consumeCraft("white");
@@ -29,6 +45,14 @@ describe("GameState day loop", () => {
     }
     const log = g.settle();
     expect(log.revenue + log.wasted).toBeGreaterThan(0);
+  });
+
+  it("refunds ingredients when a bake cannot start", () => {
+    const g = new GameState();
+    const flour = g.inventory.flour;
+    expect(g.consumeCraft("white")).toBe(true);
+    g.refundCraft("white");
+    expect(g.inventory.flour).toBe(flour);
   });
 
   it("refuses an upgrade the player cannot afford", () => {

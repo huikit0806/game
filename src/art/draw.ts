@@ -72,3 +72,19 @@ export function pop(scene: Phaser.Scene, target: Phaser.GameObjects.GameObject):
     ease: "Back.easeOut",
   });
 }
+
+/** 出爐蒸汽：短暫上升後消失，不進模擬。 */
+export function puffSteam(scene: Phaser.Scene, x: number, y: number): void {
+  for (let i = 0; i < 5; i++) {
+    const c = scene.add.circle(x + (i - 2) * 7, y, 5 + i, 0xfffdf8, 0.7).setDepth(12);
+    scene.tweens.add({
+      targets: c,
+      y: y - 28 - i * 4,
+      alpha: 0,
+      scale: 1.8,
+      duration: 420 + i * 40,
+      ease: "Sine.easeOut",
+      onComplete: () => c.destroy(),
+    });
+  }
+}

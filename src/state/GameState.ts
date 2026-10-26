@@ -239,6 +239,12 @@ export class GameState {
     return true;
   }
 
+  refundCraft(id: RecipeId): void {
+    for (const [ing, qty] of Object.entries(RECIPE_MAP[id].cost)) {
+      this.inventory[ing as IngredientId] += qty ?? 0;
+    }
+  }
+
   /** 小遊戲失敗只扣一點新鮮度，不做報廢。 */
   finishBake(recipeId: RecipeId, freshness: number): Loaf {
     const loaf: Loaf = {
@@ -254,15 +260,13 @@ export class GameState {
   startOven(recipeId: RecipeId, freshness: number): boolean {
     const slot = this.ovens.find((o) => o.loafId == null);
     if (!slot) return false;
-    const loaf = this.finishBake(recipeId, freshness);
-    // 先放進烤箱：營業前的「烘烤中」狀態用 remaining 表示。
-    this.loaves = this.loaves.filter((l) => l.id !== loaf.id);
+    const id = `loaf-${++loafSeq}`;
     const bake = RECIPE_MAP[recipeId].bakeSeconds * this.bakeFactor();
-    slot.loafId = loaf.id;
+    slot.loafId = id;
     slot.recipeId = recipeId;
     slot.remaining = bake;
     slot.total = bake;
-    this.pendingFresh.set(loaf.id, loaf.freshness);
+    this.pendingFresh.set(id, Math.max(55, Math.min(100, freshness)));
     return true;
   }
 
@@ -299,6 +303,20 @@ export class GameState {
     return this.loaves.filter((l) => l.shelf === index && l.freshness > 0);
   }
 
+  /** 把托盤上的包依序補到空位，回傳成功上架數量。 */
+  stockShelves(): number {
+    let n = 0;
+    for (const loaf of this.trayLoaves()) {
+      for (let s = 0; s < this.shelfCount(); s++) {
+        if (this.placeOnShelf(loaf.id, s)) {
+          n += 1;
+          break;
+        }
+      }
+    }
+    return n;
+  }
+
   placeOnShelf(loafId: string, shelf: number): boolean {
     if (shelf < 0 || shelf >= this.shelfCount()) return false;
     const loaf = this.loaves.find((l) => l.id === loafId);
@@ -325,12 +343,24 @@ export class GameState {
     this.customers = [];
   }
 
-  tickShop(dt: number): { bought: Loaf | null; left: boolean; spawned: boolean; baked: Loaf[] } {
-    const result = { bought: null as Loaf | null, left: false, spawned: false, baked: [] as Loaf[] };
-    this.shopTime -= dt;
+  tickShop(dt: number): {
+    bought: Loaf | null;
+    left: boolean;
+    spawned: boolean;
+    baked: Loaf[];
+    staffed: Loaf[];
+  } {
+    const result = {
+      bought: null as Loaf | null,
+      left: false,
+      spawned: false,
+      baked: [] as Loaf[],
+      staffed: [] as Loaf[],
+    };
+    if (!this.isArranging()) this.shopTime -= dt;
     result.baked = this.tickKitchen(dt);
     this.decayFreshness(dt);
-    this.autoStaff();
+    result.staffed = this.autoStaff();
 
     for (const c of this.customers) c.patience -= dt;
     const leaving = this.customers.filter((c) => c.patience <= 0);
@@ -341,9 +371,8 @@ export class GameState {
     }
 
     this.spawnTimer -= dt;
-    const hasStock =
-      this.loaves.some((l) => l.freshness > 0) || this.ovens.some((o) => o.loafId != null);
-    if (hasStock && this.spawnTimer <= 0 && this.customers.length < 4 && this.shopTime > 3) {
+    const onShelf = this.loaves.some((l) => l.shelf != null && l.freshness > 0);
+    if (onShelf && this.spawnTimer <= 0 && this.customers.length < 4 && this.shopTime > 3) {
       this.spawnTimer = spawnInterval(this.upgrades.decor);
       const preferred = this.featured[Math.floor(Math.random() * this.featured.length)] ?? null;
       this.customers.push({
@@ -421,13 +450,25 @@ export class GameState {
   }
 
   /** 員工：把托盤上的包自動補到空架。 */
-  private autoStaff(): void {
-    if (this.upgrades.staff <= 0) return;
+  private autoStaff(): Loaf[] {
+    const moved: Loaf[] = [];
+    if (this.upgrades.staff <= 0) return moved;
     for (const loaf of this.trayLoaves()) {
       for (let s = 0; s < this.shelfCount(); s++) {
-        if (this.placeOnShelf(loaf.id, s)) break;
+        if (this.placeOnShelf(loaf.id, s)) {
+          moved.push(loaf);
+          break;
+        }
       }
     }
+    return moved;
+  }
+
+  isArranging(): boolean {
+    return (
+      this.trayLoaves().length > 0 &&
+      !this.loaves.some((l) => l.shelf != null && l.freshness > 0)
+    );
   }
 
   isShopOver(): boolean {
