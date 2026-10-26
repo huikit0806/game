@@ -25,6 +25,7 @@ export function scrollPane(
     start = content.y;
   });
   scene.input.on("pointermove", (p: Phaser.Input.Pointer) => {
+    if (scene.registry.get("scrollLock")) return;
     if (!p.isDown) return;
     if (!Phaser.Geom.Rectangle.Contains(zone.getBounds(), p.x, p.y) && Math.abs(p.y - dragY) < 4) return;
     if (Math.abs(p.y - dragY) < 2) return;
@@ -32,6 +33,7 @@ export function scrollPane(
     clamp();
   });
   scene.input.on("wheel", (_p: Phaser.Input.Pointer, _g: unknown, _dx: number, dy: number) => {
+    if (scene.registry.get("scrollLock")) return;
     content.y -= dy * 0.4;
     clamp();
   });

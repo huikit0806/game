@@ -5,7 +5,7 @@ describe("GameState day loop", () => {
   it("lets the player order flour and bake a white loaf", () => {
     const g = new GameState();
     g.setCart("flour", 2);
-    expect(g.checkoutCart()).toBe(true);
+    expect(g.placeOrder(true)).toBe(true);
     expect(g.inventory.flour).toBeGreaterThanOrEqual(12);
     expect(g.canCraft("white")).toBe(true);
     expect(g.consumeCraft("white")).toBe(true);
@@ -45,6 +45,31 @@ describe("GameState day loop", () => {
     }
     const log = g.settle();
     expect(log.revenue + log.wasted).toBeGreaterThan(0);
+  });
+
+  it("schedules stock three days out and charges extra for a rush", () => {
+    const g = new GameState();
+    const flour = g.inventory.flour;
+    g.setCart("flour", 2);
+    const booked = g.todayPrices.flour * 2;
+    expect(g.placeOrder(false)).toBe(true);
+    expect(g.inventory.flour).toBe(flour);
+    expect(g.pendingOrders[0].arriveDay).toBe(4);
+    expect(g.cash).toBe(180 - booked);
+    g.beginDay(true);
+    g.beginDay(true);
+    expect(g.inventory.flour).toBe(flour);
+    g.beginDay(true);
+    expect(g.day).toBe(4);
+    expect(g.inventory.flour).toBe(flour + 2);
+    expect(g.deliveryNote).toContain("麵粉");
+
+    g.setCart("sugar", 1);
+    const before = g.cash;
+    const rush = Math.ceil(g.todayPrices.sugar * 1.5);
+    expect(g.placeOrder(true)).toBe(true);
+    expect(g.cash).toBe(before - rush);
+    expect(g.inventory.sugar).toBe(7);
   });
 
   it("refunds ingredients when a bake cannot start", () => {

@@ -1,9 +1,13 @@
 import {
+  ORDER_LEAD_DAYS,
+  RUSH_RATE,
+  SAVE_VERSION,
   STARTING_CASH,
   STARTING_OVEN_SLOTS,
   STARTING_SHELVES,
   SHOP_SECONDS,
 } from "../config";
+import { INGREDIENT_MAP } from "../data/ingredients";
 import { RECIPE_MAP } from "../data/recipes";
 import { UPGRADE_MAP } from "../data/upgrades";
 import { dailyPrices, xpToNext } from "../systems/economy";
@@ -21,6 +25,7 @@ import type {
   Phase,
   RecipeId,
   SaveData,
+  SupplyOrder,
   UpgradeId,
 } from "./types";
 
@@ -70,6 +75,9 @@ export class GameState {
 
   /** 當日已付材料費（訂貨當下扣錢，結算再展示）。 */
   paidMaterials = 0;
+  pendingOrders: SupplyOrder[] = [];
+  /** 今日開舖時剛入倉的說明，準備畫面顯示一次。 */
+  deliveryNote = "";
 
   applySave(data: SaveData): void {
     this.day = data.day;
@@ -83,13 +91,17 @@ export class GameState {
     this.lifetimeSold = { ...data.lifetimeSold };
     this.upgrades = { ...data.upgrades };
     this.prices = { ...data.prices };
+    this.pendingOrders = (data.pendingOrders ?? []).map((o) => ({
+      arriveDay: o.arriveDay,
+      items: { ...o.items },
+    }));
     this.phase = "prep";
     this.beginDay(false);
   }
 
   toSave(): SaveData {
     return {
-      version: 1,
+      version: SAVE_VERSION,
       day: this.day,
       cash: this.cash,
       xp: this.xp,
@@ -101,6 +113,7 @@ export class GameState {
       lifetimeSold: { ...this.lifetimeSold },
       upgrades: { ...this.upgrades },
       prices: { ...this.prices },
+      pendingOrders: this.pendingOrders.map((o) => ({ arriveDay: o.arriveDay, items: { ...o.items } })),
       phaseHint: "prep",
     };
   }
@@ -110,7 +123,12 @@ export class GameState {
   }
 
   beginDay(advanceDay: boolean): void {
-    if (advanceDay) this.day += 1;
+    if (advanceDay) {
+      this.day += 1;
+      this.deliveryNote = this.receiveDueOrders();
+    } else {
+      this.deliveryNote = "";
+    }
     this.phase = "prep";
     this.todayPrices = dailyPrices(this.day);
     this.cart = {};
@@ -201,19 +219,49 @@ export class GameState {
     return sum;
   }
 
-  checkoutCart(): boolean {
-    const total = this.cartTotal();
+  /** 正常單三日後到；急單即時入倉，價錢乘 RUSH_RATE。兩者都係落單時付款。 */
+  placeOrder(rush: boolean): boolean {
+    const base = this.cartTotal();
+    if (base <= 0) return false;
+    const total = rush ? Math.ceil(base * RUSH_RATE) : base;
     if (total > this.cash) return false;
+    const items: SupplyOrder["items"] = {};
+    for (const [id, qty] of Object.entries(this.cart)) {
+      if ((qty ?? 0) > 0) items[id as IngredientId] = qty ?? 0;
+    }
     this.cash -= total;
     this.paidMaterials += total;
     this.log.materialCost += total;
-    for (const [id, qty] of Object.entries(this.cart)) {
-      const key = id as IngredientId;
-      this.inventory[key] = (this.inventory[key] ?? 0) + (qty ?? 0);
+    if (rush) {
+      this.addItems(items);
+      this.deliveryNote = "急單已入倉";
+    } else {
+      this.pendingOrders.push({ arriveDay: this.day + ORDER_LEAD_DAYS, items });
+      this.deliveryNote = "";
     }
     this.cart = {};
     this.persist();
     return true;
+  }
+
+  private addItems(items: SupplyOrder["items"]): void {
+    for (const [id, qty] of Object.entries(items)) {
+      const key = id as IngredientId;
+      this.inventory[key] = (this.inventory[key] ?? 0) + (qty ?? 0);
+    }
+  }
+
+  private receiveDueOrders(): string {
+    const due = this.pendingOrders.filter((o) => o.arriveDay <= this.day);
+    this.pendingOrders = this.pendingOrders.filter((o) => o.arriveDay > this.day);
+    const parts: string[] = [];
+    for (const order of due) {
+      this.addItems(order.items);
+      for (const [id, qty] of Object.entries(order.items)) {
+        parts.push(`${INGREDIENT_MAP[id as IngredientId]?.name ?? id}×${qty}`);
+      }
+    }
+    return parts.length ? `今日到貨 ${parts.join("、")}` : "";
   }
 
   toggleFeatured(id: RecipeId): void {

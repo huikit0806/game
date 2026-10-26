@@ -1,5 +1,6 @@
 import Phaser from "phaser";
-import { INGREDIENTS } from "../data/ingredients";
+import { ORDER_LEAD_DAYS, RUSH_RATE } from "../config";
+import { INGREDIENTS, INGREDIENT_MAP } from "../data/ingredients";
 import { RECIPES } from "../data/recipes";
 import { game } from "../state/GameState";
 import { C, textStyle } from "../ui/theme";
@@ -23,11 +24,30 @@ export class PrepScene extends Phaser.Scene {
     let y = 8;
 
     const goal = this.add.text(20, y, `今日目標：${g.goal.title}`, textStyle(13, "#c45c28"));
-    const hint = this.add.text(20, y + 22, "訂原材料（即時到貨）· 揀今日主推", textStyle(12, "#8a6a55"));
+    const hint = this.add.text(
+      20,
+      y + 22,
+      `預約 ${ORDER_LEAD_DAYS} 日後到貨 · 即日急單 +${Math.round((RUSH_RATE - 1) * 100)}%`,
+      textStyle(12, "#8a6a55"),
+    );
     box.add([goal, hint]);
     y += 48;
+    if (g.deliveryNote) {
+      const note = this.add.text(20, y, g.deliveryNote, textStyle(13, "#6f9b6a", { wordWrap: { width: w - 40 } }));
+      box.add(note);
+      y += 36;
+    }
 
-    const total = this.add.text(24, 0, `應付 $${g.cartTotal()}`, textStyle(16, "#c45c28"));
+    const total = this.add.text(24, 0, "", textStyle(16, "#c45c28"));
+    let rushLabel: Phaser.GameObjects.Text | null = null;
+    let rushBtn: { setLabel: (t: string) => void } | null = null;
+    const refreshPay = () => {
+      const base = g.cartTotal();
+      total.setText(`預約 $${base}`);
+      const rushPay = Math.ceil(base * RUSH_RATE);
+      rushLabel?.setText(`急單 $${rushPay}（+${Math.round((RUSH_RATE - 1) * 100)}%）`);
+      rushBtn?.setLabel(`即日 $${rushPay}`);
+    };
 
     INGREDIENTS.forEach((ing) => {
       const locked = !g.unlockedIngredients.includes(ing.id);
@@ -50,12 +70,12 @@ export class PrepScene extends Phaser.Scene {
         const minus = button(this, w - 96, 26, 28, 28, "−", () => {
           g.setCart(ing.id, qty() - 1);
           qtyText.setText(`${qty()}`);
-          total.setText(`應付 $${g.cartTotal()}`);
+          refreshPay();
         }, C.inkSoft);
         const plus = button(this, w - 28, 26, 28, 28, "+", () => {
           g.setCart(ing.id, qty() + 1);
           qtyText.setText(`${qty()}`);
-          total.setText(`應付 $${g.cartTotal()}`);
+          refreshPay();
         }, C.sage);
         card.add([qtyText, minus.container, plus.container]);
       }
@@ -63,21 +83,37 @@ export class PrepScene extends Phaser.Scene {
       y += 58;
     });
 
-    total.setPosition(24, y + 4);
-    const buy = button(this, w - 88, y + 16, 120, 36, "確認訂貨", () => {
-      if (g.cartTotal() === 0) {
-        toast(this, "先揀要訂幾多");
-        return;
-      }
-      if (!g.checkoutCart()) {
-        toast(this, "現金不夠");
-        return;
-      }
-      toast(this, "材料已到貨");
-      this.time.delayedCall(280, () => this.scene.restart());
+    total.setPosition(24, y + 2);
+    rushLabel = this.add.text(24, y + 24, "", textStyle(12, "#c45c28"));
+    const book = button(this, w / 2 - 78, y + 68, 140, 40, `${ORDER_LEAD_DAYS}日後到`, () => {
+      this.submitOrder(false);
     }, C.sage);
-    box.add([total, buy.container]);
-    y += 56;
+    const rush = button(this, w / 2 + 78, y + 68, 140, 40, "即日", () => {
+      this.submitOrder(true);
+    }, C.accent);
+    rushBtn = rush;
+    refreshPay();
+    box.add([total, rushLabel, book.container, rush.container]);
+    y += 100;
+
+    const pendingTitle = this.add.text(20, y, "未到貨", textStyle(13, "#5c3d2e"));
+    box.add(pendingTitle);
+    y += 22;
+    if (g.pendingOrders.length === 0) {
+      const empty = this.add.text(20, y, "未有預約", textStyle(12, "#8a6a55"));
+      box.add(empty);
+      y += 24;
+    } else {
+      for (const order of g.pendingOrders) {
+        const bits = Object.entries(order.items)
+          .map(([id, qty]) => `${INGREDIENT_MAP[id as keyof typeof INGREDIENT_MAP].name}×${qty}`)
+          .join("、");
+        const line = this.add.text(20, y, `第 ${order.arriveDay} 日　${bits}`, textStyle(12, "#8a6a55"));
+        box.add(line);
+        y += 20;
+      }
+      y += 8;
+    }
 
     const featTitle = this.add.text(20, y, "今日主推（最多 2 款）", textStyle(13, "#5c3d2e"));
     box.add(featTitle);
@@ -104,5 +140,19 @@ export class PrepScene extends Phaser.Scene {
       this.scene.start("kitchen");
     });
     footer.add(go.container);
+  }
+
+  private submitOrder(rush: boolean): void {
+    const g = game();
+    if (g.cartTotal() === 0) {
+      toast(this, "先揀要訂幾多");
+      return;
+    }
+    if (!g.placeOrder(rush)) {
+      toast(this, "現金不夠");
+      return;
+    }
+    toast(this, rush ? "急單已入倉" : `已預約，第 ${g.day + ORDER_LEAD_DAYS} 日到`);
+    this.time.delayedCall(280, () => this.scene.restart());
   }
 }

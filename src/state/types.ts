@@ -125,6 +125,12 @@ export interface DailyGoal {
   rewardCash: number;
 }
 
+/** 已付款、未入倉的訂貨。arriveDay 當日開舖時入庫。 */
+export interface SupplyOrder {
+  arriveDay: number;
+  items: Partial<Record<IngredientId, number>>;
+}
+
 export interface SaveData {
   version: number;
   day: number;
@@ -138,6 +144,7 @@ export interface SaveData {
   lifetimeSold: Partial<Record<RecipeId, number>>;
   upgrades: Record<UpgradeId, number>;
   prices: Partial<Record<RecipeId, number>>;
+  pendingOrders: SupplyOrder[];
   /** 下一日開始時套用。營業中不存即時麵包，避免卡在半日。 */
   phaseHint: Phase;
 }

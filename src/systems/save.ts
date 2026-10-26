@@ -25,6 +25,7 @@ export function defaultSave(): SaveData {
     lifetimeSold: {},
     upgrades: { ...EMPTY_UPGRADES },
     prices: { white: 14 },
+    pendingOrders: [],
     phaseHint: "prep",
   };
 }
@@ -88,5 +89,6 @@ function migrate(data: SaveData): SaveData {
       : base.unlockedIngredients,
     completedGoals: data.completedGoals ?? [],
     lifetimeSold: data.lifetimeSold ?? {},
+    pendingOrders: Array.isArray(data.pendingOrders) ? data.pendingOrders : [],
   };
 }
